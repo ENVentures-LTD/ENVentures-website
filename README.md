@@ -16,7 +16,6 @@ Static company website for ENVentures LTD, designed for GitHub Pages.
 - `index.html`: company homepage
 - `about.html`: company profile and registered details
 - `products.html`: products page, including Fameally
-- `fameally.html`: redirect to `products.html` for older links
 - `contact.html`: email contact page
 
 ## Contact form
