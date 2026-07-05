@@ -36,6 +36,8 @@ This site has no build step. Publish the repository with GitHub Pages using the 
 
 The `CNAME` file sets the custom domain to `enventures.co.uk`. Configure DNS with your domain provider according to GitHub Pages' current instructions.
 
+If the live site appears stale, check the GitHub Actions `pages build and deployment` run for the latest commit.
+
 ## Legal note
 
 GOV.UK says UK limited company websites should show the company number, registered office address, where the company is registered, and the fact that it is a limited company. This site includes those details in the footer and company pages.
