@@ -17,6 +17,7 @@ Static company website for ENVentures LTD, designed for GitHub Pages.
 - `about.html`: company profile and registered details
 - `products.html`: products page, including Fameally
 - `contact.html`: email contact page
+- `google1238ddcf9c51d2ca.html`: Google Search Console verification file
 
 ## Contact form
 
@@ -36,6 +37,10 @@ This site has no build step. Publish the repository with GitHub Pages using the 
 The `CNAME` file sets the custom domain to `enventures.co.uk`. Configure DNS with your domain provider according to GitHub Pages' current instructions.
 
 If the live site appears stale, check the GitHub Actions `pages build and deployment` run for the latest commit.
+
+## Search Console verification
+
+The `google1238ddcf9c51d2ca.html` file proves ownership of `enventures.co.uk` in Google Search Console. It must remain available at the site root unless the domain is verified another way.
 
 ## Legal note
 
