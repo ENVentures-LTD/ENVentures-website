@@ -11,6 +11,14 @@ Static company website for ENVentures LTD, designed for GitHub Pages.
 - Fameally URL: <https://www.fameally.com>
 - Contact email: `contact@enventures.co.uk`
 
+## Site structure
+
+- `index.html`: company homepage
+- `about.html`: company profile and registered details
+- `products.html`: products page, including Fameally
+- `fameally.html`: redirect to `products.html` for older links
+- `contact.html`: email contact page
+
 ## Contact form
 
 The contact page uses a zero-cost `mailto:` form. It opens the visitor's email client with a prefilled message instead of submitting data to a backend.
