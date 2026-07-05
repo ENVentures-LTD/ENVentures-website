@@ -122,11 +122,9 @@ svg {
 }
 
 .hero-inner {
-  min-height: 620px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  min-height: 560px;
+  display: flex;
   align-items: center;
-  gap: 52px;
   padding: 72px 0;
 }
 
@@ -222,65 +220,8 @@ h3 {
   color: #fff;
 }
 
-.hero-panel {
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.hero-panel-top {
-  padding: 28px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.hero-panel-top strong {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 1.12rem;
-}
-
-.hero-panel-top p,
-.stat p {
-  margin-bottom: 0;
-  color: #c5d2df;
-}
-
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.stat {
-  min-height: 132px;
-  padding: 24px;
-  border-right: 1px solid rgba(255, 255, 255, 0.14);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.stat:nth-child(2n) {
-  border-right: 0;
-}
-
-.stat:nth-last-child(-n + 2) {
-  border-bottom: 0;
-}
-
-.stat span {
-  display: block;
-  margin-bottom: 4px;
-  color: #fff;
-  font-size: 1.65rem;
-  font-weight: 850;
-}
-
 .section {
   padding: 86px 0;
-}
-
-.section.compact {
-  padding: 56px 0;
 }
 
 .section.alt {
@@ -400,14 +341,6 @@ h3 {
   margin-bottom: 10px;
 }
 
-.notice {
-  padding: 18px 20px;
-  border: 1px solid #b8e7dd;
-  border-radius: var(--radius);
-  background: #e8fbf6;
-  color: #0d564b;
-}
-
 .contact-form {
   display: grid;
   gap: 16px;
@@ -511,7 +444,6 @@ textarea:focus {
     padding-bottom: 4px;
   }
 
-  .hero-inner,
   .split,
   .grid-2,
   .grid-3,
@@ -541,20 +473,5 @@ textarea:focus {
   .footer-inner,
   .nav {
     width: min(100% - 24px, 1120px);
-  }
-
-  .stat-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stat,
-  .stat:nth-child(2n),
-  .stat:nth-last-child(-n + 2) {
-    border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  }
-
-  .stat:last-child {
-    border-bottom: 0;
   }
 }
