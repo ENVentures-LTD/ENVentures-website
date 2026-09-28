@@ -2,7 +2,7 @@ name: Submit URLs to IndexNow
 
 on:
   workflow_run:
-    workflows: ["pages-build-deployment"]
+    workflows: ["pages-build-deployment", "pages build and deployment"]
     types: [completed]
     branches: [main]
   workflow_dispatch:
