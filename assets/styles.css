@@ -475,3 +475,15 @@ textarea:focus {
     width: min(100% - 24px, 1120px);
   }
 }
+
+/* Accessible shared navigation and product breadcrumbs. */
+:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+.skip-link { position: absolute; left: 12px; top: -100px; z-index: 20; padding: 12px 18px; background: var(--navy); color: #fff; }
+.skip-link:focus { top: 12px; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; font-size: .9rem; color: #d7e2ee; }
+.page-hero .eyebrow { color: #46c9b2; }
+.section > .eyebrow, .section > div > .eyebrow { color: #117564; }
+.page-hero .section > .eyebrow { color: #46c9b2; }
+.page-hero .lead { color: #d7e2ee; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 860px) { .nav-links { flex-wrap: wrap; overflow-x: visible; } }
