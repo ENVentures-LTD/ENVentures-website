@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#08111f"/><rect x="72" y="80" width="70" height="8" fill="#2bb99f"/><g font-family="Arial, sans-serif"><text x="72" y="170" fill="#46c9b2" font-size="28" font-weight="700">ENVentures LTD</text><text x="72" y="290" fill="#ffffff" font-size="64" font-weight="700">Building useful</text><text x="72" y="367" fill="#ffffff" font-size="64" font-weight="700">digital products.</text><text x="72" y="465" fill="#c5d0df" font-size="28">Apps, games and everyday ideas.</text><text x="72" y="556" fill="#c5d0df" font-size="24">enventures.co.uk</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title">
+  <title id="title">ENVentures LTD: apps that start with a real need</title>
+  <style>@font-face{font-family:Inter;src:url('/assets/fonts/InterVariable.woff2') format('woff2');font-weight:100 900;font-style:normal}text{font-family:Inter,Arial,sans-serif;font-optical-sizing:auto}</style>
+  <defs><linearGradient id="brand" x2="1" y2="0.6"><stop stop-color="#192e7b"/><stop offset="1" stop-color="#2853d0"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#brand)"/>
+  <g fill="#ffffff">
+    <text x="64" y="73" font-size="28" font-weight="650" letter-spacing="-0.8">ENVentures</text>
+    <text x="238" y="73" font-size="11" font-weight="500" letter-spacing="0.5">LTD</text>
+    <path d="M64 112H1136" fill="none" stroke="#819de6" stroke-opacity="0.5"/>
+    <path d="M64 176H82" fill="none" stroke="#ffc595" stroke-width="2"/>
+    <text x="96" y="181" font-size="14" font-weight="500" fill="#dce8ff">UK software company</text>
+    <text x="64" y="290" font-size="64" font-weight="650" letter-spacing="-2">Apps that start</text>
+    <text x="64" y="368" font-size="64" font-weight="650" letter-spacing="-2" fill="#b8f5e1">with a real need.</text>
+    <path d="M64 503H1136" fill="none" stroke="#819de6" stroke-opacity="0.5"/>
+    <text x="64" y="552" font-size="15">enventures.co.uk</text>
+    <text x="1136" y="552" font-size="13" text-anchor="end" fill="#dce8ff">Registered in England and Wales</text>
+  </g>
+</svg>

@@ -3,3 +3,4 @@
 .env.*
 Thumbs.db
 .DS_Store
+output/review/

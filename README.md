@@ -1,6 +1,6 @@
 # ENVentures LTD Website
 
-Static company website for ENVentures LTD, designed for GitHub Pages.
+Corporate website for ENVentures LTD, with browser-side JavaScript interactions and static file delivery through GitHub Pages.
 
 ## Launch details
 
@@ -15,24 +15,20 @@ Static company website for ENVentures LTD, designed for GitHub Pages.
 
 - `index.html`: company homepage
 - `about.html`: company profile and registered details
-- `products.html`: products page, including Fameally
+- `products.html`: concise product portfolio with links to product websites
+- `products/fameally.html`: legacy URL redirect to Fameally's own website
 - `contact.html`: email contact page
 - `google*.html`: Google Search Console verification files
 
-## Contact form
+## Company contact
 
-The contact page uses a zero-cost `mailto:` form. It opens the visitor's email client with a prefilled message instead of submitting data to a backend.
+The contact page provides a direct `mailto:` link to `contact@enventures.co.uk`. It opens the visitor's email app; the address can also be copied into another email service. An optional email-copy button uses the Clipboard API and provides a selectable address if copying is unavailable. There is no contact form, JavaScript mail composer or enquiry backend. Product support is directed through the portfolio to the relevant product website.
 
-The contact page uses the shared mailbox `contact@enventures.co.uk`.
-
-- `contact.html`
-- `assets/contact.js` fallback recipient
-- `privacy.html`
-- `cookies.html`
+Keep the mailbox consistent in `contact.html`, the shared footer, Organization structured data and `privacy.html`.
 
 ## GitHub Pages deployment
 
-This site has no build step. Publish the repository with GitHub Pages using the root directory of the default branch.
+This site has no build step or server runtime. The interactive experience runs in the browser through `assets/site.js`; the existing GitHub Pages source and deployment workflow are unchanged. Publish the repository with GitHub Pages using the root directory of the default branch.
 
 The `CNAME` file sets the custom domain to `enventures.co.uk`. Configure DNS with your domain provider according to GitHub Pages' current instructions.
 
@@ -58,12 +54,30 @@ Protocol reference: <https://www.indexnow.org/documentation>.
 
 GOV.UK says UK limited company websites should show the company number, registered office address, where the company is registered, and the fact that it is a limited company. This site includes those details in the footer and company pages.
 
-## Product pages and checks
+## Corporate content and checks
 
-Fameally's company/product page is `/products/fameally.html`. Keep household advice and search-focused meal planning content on Fameally; company stories belong here. Social links are deferred until official URLs are confirmed. Do not add Fameally profiles to the company Organization's sameAs or global footer.
+This is the corporate website for ENVentures LTD. The homepage explains the company's purpose and approach; About provides company information and registered details; Portfolio lists available products briefly and links to their own websites. Product features, pricing, tutorials, resources and release updates belong on each product's website. There is no company news section at present. Product concepts should not appear as available offerings.
 
-Run `node scripts/validate-site.mjs` before publication. The validator covers the seven content pages and deliberately excludes the Google ownership-verification file. Preview with `python -m http.server 8767 --bind 127.0.0.1`. Check home, products, Fameally and contact with keyboard navigation, 200% zoom and a narrow viewport.
+Fameally has one brief portfolio entry at `/products.html#fameally`. The former detailed product page at `/products/fameally.html` is a zero-second HTML refresh redirect to `https://fameally.com/`, with a canonical destination and a visible fallback link. It is excluded from the sitemap. GitHub Pages does not provide repository-controlled server redirects. Do not add article content or duplicate app marketing to the compatibility page.
 
-The application ID is `https://fameally.com/#app`; its publisher and creator are `https://enventures.co.uk/#organization`. Keep the app data consistent with Fameally's homepage. The company image is a locally hosted 1200 × 630 PNG; its SVG source is in assets.
+Run `node scripts/validate-site.mjs` before publication. The validator checks the six company content pages, company and page entities, portfolio entries, breadcrumbs, local links, accessibility attributes, metadata, the sharing image, sitemap and legacy redirect. The Google ownership-verification file is deliberately excluded from content-page checks.
 
-Review locally before pushing to the publishing branch: this site's branch-based Pages deployment can publish a push. Release the company entity/product changes before the companion Fameally changes, then verify both cross-site links. Keep the previous revision for rollback. Website changes do not authorize changes to store listings or social accounts.
+Preview with `python -m http.server 8768 --bind 127.0.0.1`. Review home, About, Portfolio and Contact with keyboard navigation, 200% zoom and a narrow viewport. Local screenshots and review output belong in ignored `output/review/`.
+
+The company entity remains `https://enventures.co.uk/#organization`. Its name, company number and registered office must agree with the visible company information. Product social profiles belong to the product; do not add them to the company entity or global footer. The company sharing image is a locally hosted 1200 x 630 PNG, with its matching SVG source in assets. The blue-and-mint design uses a locally hosted Inter variable font across headings, body text and controls. There are no live requests to an external font service. Keep `assets/fonts/Inter-LICENSE.txt` with the font. The WOFF2 was downloaded from the upstream [rsms/inter font files](https://github.com/rsms/inter/tree/master/docs/font-files) and verified against Git blob `5a8d3e72ad7ffb62af3b146e1b1f54ab5813a212`. The sharing SVG uses that same local font; render it as a standalone document when regenerating the PNG.
+
+## Browser interactions
+
+`assets/site.js` progressively enhances the existing HTML. The homepage approach tabs support click, Left/Right arrows, Home and End, with a single selected tab and its labelled panel. The mobile navigation opens with a button, closes with Escape, and resets correctly across the desktop breakpoint. Email copying reports success only after the Clipboard API resolves; unavailable or denied copying reveals a readonly field for manual selection. These interactions do not submit enquiries, fetch external data, store preferences or add analytics.
+
+All company content, product links and email links remain available without JavaScript. The approach panels are readable in the source HTML; inactive panels are hidden only after the widget has initialised successfully. Pages keep ordinary browser navigation, with a short CSS entrance fade. No experimental cross-document transition API or JavaScript router is required. Section and panel motion respects `prefers-reduced-motion` and never leaves content hidden while waiting for a scroll event.
+
+Checks: `node --check assets/site.js` and `node scripts/validate-site.mjs`. In the preview, verify tab selection and keyboard wrapping, mobile menu open/Escape/resize behaviour, email-copy success and manual fallback, and navigation at phone and desktop widths. Check the no-JavaScript layout and reduced-motion behaviour when those browser controls are available. No hosting migration, framework installation or build pipeline change is required.
+
+References: [GitHub Pages hosting](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages), [WAI tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/), [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText).
+
+## Review and publication
+
+Keep changes local until the user has reviewed and explicitly approved publication. A push to the publishing branch can publish this site automatically. Do not push, dispatch deployment workflows or submit indexing notifications before approval. Local validation and the IndexNow dry run do not publish or submit URLs.
+
+After approval, publish the reviewed revision and check the corporate pages, cross-site product link, legacy redirect and sitemap. Preserve the Google verification file and public IndexNow key. Keep the previous revision available for rollback. Website changes do not authorize changes to store listings, social accounts or product websites.

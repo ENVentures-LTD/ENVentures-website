@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://enventures.co.uk/</loc>
-  </url>
-  <url>
-    <loc>https://enventures.co.uk/about.html</loc>
-  </url>
-  <url>
-    <loc>https://enventures.co.uk/products.html</loc>
-  </url>
-  <url>
-    <loc>https://enventures.co.uk/contact.html</loc>
-  </url>
-  <url>
-    <loc>https://enventures.co.uk/privacy.html</loc>
-  </url>
-  <url>
-    <loc>https://enventures.co.uk/cookies.html</loc>
-  </url>
-  <url><loc>https://enventures.co.uk/products/fameally.html</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://enventures.co.uk/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://enventures.co.uk/about.html</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://enventures.co.uk/products.html</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://enventures.co.uk/contact.html</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://enventures.co.uk/privacy.html</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://enventures.co.uk/cookies.html</loc></url>
 </urlset>
